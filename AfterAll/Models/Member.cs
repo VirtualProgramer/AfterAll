@@ -11,5 +11,6 @@ namespace AfterAll.Models {
         public string Password { get; set; }
         public DateTime Birth { get; set; }
         public int Phone { get; set; }
+        public int AccessLevel { get; set; }
     }
 }
