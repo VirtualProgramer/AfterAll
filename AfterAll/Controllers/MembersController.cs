@@ -47,7 +47,7 @@ namespace AfterAll.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MemberID,Name,Email,Password,Birth,Phone")] Member member)
+        public ActionResult Create([Bind(Include = "MemberID,Name,Email,Password,Birth,Phone,AccessLevel")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace AfterAll.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MemberID,Name,Email,Password,Birth,Phone")] Member member)
+        public ActionResult Edit([Bind(Include = "MemberID,Name,Email,Password,Birth,Phone,AccessLevel")] Member member)
         {
             if (ModelState.IsValid)
             {
