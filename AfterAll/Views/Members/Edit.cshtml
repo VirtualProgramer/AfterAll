@@ -7,10 +7,9 @@
 <h2>Edit</h2>
 
 
-@using (Html.BeginForm())
-{
+@using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Member</h4>
         <hr />
@@ -79,4 +78,12 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/moment.js"></script>
+    <script>
+        $(() => {
+            //載入時顯示值
+            let Birth = moment($("#Birth")[0].defaultValue).format("YYYY-MM-DD");
+            $("#Birth").val(Birth);
+        });
+    </script>
 }
